@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cross Domain</title>
+  </head>
+  <body>
+    client page!
+
+
+    <!-- 1. AJAX -->
+    <!-- <script>
+      const xhr = new XMLHttpRequest();
+      xhr.open("get", "http://127.0.1:8889");
+      xhr.send();
+    </script> -->
+    <!-- 2. fetch -->
+    <script>
+        fetch("http://127.0.1:8889", {
+          method: 'POST',
+          headers: {
+            'My-Token': '123',
+            'My-Random': 'from server'
+          }
+        })
+      </script>
+    <!-- 3. JSONP -->
+    <!-- <script src="http://127.0.1:8889"></script> -->
+  </body>
+</html>
