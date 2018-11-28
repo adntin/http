@@ -5,7 +5,7 @@ http
     // 注意: 
     // 1. Access-Control-Allow-Origin 只允许设置一个域名
     // 2. 实际开发中, 根据request请求的URL动态设置
-    response.writeHead(200,{
+    response.writeHead(200, {
       // 'Access-Control-Allow-Origin': '*'
       'Access-Control-Allow-Origin': 'http://127.0.0.1:8888',
       'Access-Control-Allow-Headers': 'My-Token, My-Random',
