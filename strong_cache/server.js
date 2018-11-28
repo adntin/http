@@ -16,7 +16,7 @@ http
     if (url === '/abc.js') {
       response.writeHead(200, {
         "Content-Type": "text/javascript",
-        'Cache-Control': 'max-age=5, public' // 单位秒
+        'Cache-Control': 'max-age=10, public' // 单位秒
       });
       response.end('console.log("abc.js loaded!")')
     }
