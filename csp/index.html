@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      只允许加载[本域]的链接(js, css, img等), 不允许加载[外域]链接(js, css, img等), 不允许执行内联JS脚本, 不允许执行内联CSS样式
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Content Security Policy</title>
+  </head>
+  <body>
+    client page!
+    <form action="http://baidu.com"><button type="submit">Submit</button></form>
+    <style>
+      body {
+        background-color: red;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+      console.log("inline script");
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  </body>
+</html>
