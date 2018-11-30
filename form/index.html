@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- enctype: application/x-www-form-urlencoded -->
+    <!-- enctype: multipart/form-data -->
+    <form
+      action="action"
+      method="POST"
+      enctype="application/x-www-form-urlencoded"
+      id="form"
+    >
+      <input type="text" name="username" /><br />
+      <input type="password" name="password" /><br />
+      <input type="file" name="file" /><br />
+      <input type="submit" value="Submit" id="btn" />
+    </form>
+    <script>
+      // 有文件上传时, 表单直接提交 multipart/form-data 类型, Chrome Network 无法看到请求数据
+      // const btn = document.getElementById("btn");
+      // const form = document.getElementById("form");
+      // btn.addEventListener("click", function(e) {
+      //   e.preventDefault();
+      //   const formData = new FormData(form);
+      //   // 自动添加请求头
+      //   // 1. Content-Type: multipart/form-data; boundary=----WebKitFormBoundarySjbRKgv2D4p9Xk7A
+      //   // 2. Content-Length: 31170
+      //   fetch("/action", {
+      //     method: "POST",
+      //     body: formData
+      //   }).then(function(response) {
+      //     console.log(response);
+      //   });
+      // });
+    </script>
+  </body>
+</html>
