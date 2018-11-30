@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/adntin/http/issues"
   },
-  "homepage": "https://github.com/adntin/http#readme"
+  "homepage": "https://github.com/adntin/http#readme",
+  "dependencies": {
+    "zlib": "^1.0.5"
+  }
 }
