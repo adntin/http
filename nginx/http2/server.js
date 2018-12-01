@@ -8,7 +8,7 @@ http
       const html = fs.readFileSync("index.html", "utf8");
       response.writeHead(200, {
         "Content-Type": "text/html",
-        Connection: "close"
+        Connection: "close",
         // 路径必须跟请求路径一样
         Link: "</avatar.jpg>; as=image; rel=preload"
       });
